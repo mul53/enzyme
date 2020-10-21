@@ -57,6 +57,7 @@ export default function describeContext({
     itIf(is('>= 16'), 'throws on SFCs that lack an instance', () => {
       const context = { name: 'bob' };
       const wrapper = Wrap(<SimpleComponentSFC />, { context });
+      console.log("JAMES")
       expect(() => wrapper.context()).to.throw(
         Error,
         `${WrapperName}::context() can only be called on wrapped nodes that have a non-null instance`,
